@@ -1,0 +1,111 @@
+.home-page {
+    width: 100%;
+    padding: 2rem 0;
+  }
+  
+  .banner {
+    width: 100%;
+    height: min(70vh, 50vw);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .banner .banner-div {
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-shrink: 0;
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+  }
+  
+  .banner .banner-div.active {
+    opacity: 1;
+    transition: opacity 500ms ease-in-out;
+  }
+  
+  .banner-div .banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+  }
+  
+  .banner-div::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(15, 22, 29, 0) 0%, #0f161d 100%);
+    box-shadow: 0px 38px 58px 31px rgba(254, 0, 57, 0.05);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .banner-div .banner-description {
+    width: 65%;
+    height: 25%;
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    color: var(--support-color);
+    text-align: left;
+    z-index: 1;
+  }
+  
+  .banner-description .movie-title {
+    font-size: var(--header-font-size);
+  }
+  
+  .banner-description .movie-details {
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: var(--sub-content-font-size);
+    color: var(--accent-color);
+  }
+  
+  .banner-description .movie-genre {
+    color: var(--accent-color);
+  }
+  
+  /* Nav highlights */
+  
+  .banner .nav-highlight-container {
+    width: 15%;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  .nav-highlight-container .nav-highlight {
+    width: 20%;
+    height: 4px;
+    border-radius: 20px;
+    background-color: var(--accent-color);
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 300ms;
+  }
+  
+  .nav-highlight-container .nav-highlight.active {
+    background-color: var(--support-color);
+    opacity: 1;
+  }
+  
+  .nav-highlight-container .nav-highlight:hover {
+    opacity: 0.9;
+  }
+  

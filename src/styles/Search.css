@@ -1,0 +1,32 @@
+* {
+  transition: all 400ms;
+}
+.search-bar-active {
+  height: 2.5rem;
+  border: 2px solid var(--accent-color);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.search-bar-active .search-input {
+  width: 20rem;
+  flex-grow: 1;
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  outline: none;
+  font-family: var(--font-family-content);
+}
+
+.search-bar .search-input {
+  display: none;
+}
+
+.search-icon {
+  color: var(--support-color);
+  cursor: pointer;
+  font-size: 1.2rem;
+}

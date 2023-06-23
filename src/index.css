@@ -1,0 +1,40 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #0f161d;
+  --brand-color: #fe0039;
+  --accent-color: #c1c1c1;
+  --support-color: #ffffff;
+  --font-family-header: "Righteous", cursive;
+  --font-family-content: "Montserrat", sans-serif;
+  --header-font-size: 2.25rem;
+  --sub-header-font-size: 1.5rem;
+  --content-font-size: 1rem;
+  --sub-content-font-size: 0.667rem;
+  --container-padding: 5rem;
+}
+
+html{
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

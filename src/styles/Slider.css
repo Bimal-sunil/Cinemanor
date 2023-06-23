@@ -1,0 +1,73 @@
+.slider-component {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-component .left-arrow-backdrop,
+.slider-component .right-arrow-backdrop {
+  width: 8%;
+  height: 100%;
+  position: absolute;
+  display: none;
+  align-items: center;
+  z-index: 2;
+  padding: 0.3rem;
+}
+
+.slider-component .left-arrow-backdrop {
+  left: 0;
+  background: linear-gradient(90deg, #0f161d 0%, rgba(15, 22, 29, 0) 100%);
+}
+
+.slider-component .right-arrow-backdrop {
+  justify-content: flex-end;
+  right: 0;
+  background: linear-gradient(270deg, #0f161d 0%, rgba(15, 22, 29, 0) 100%);
+}
+
+.slider-component .left-arrow-backdrop.active,
+.slider-component .right-arrow-backdrop.active {
+  display: flex;
+}
+
+.left-arrow-backdrop .left-arrow,
+.right-arrow-backdrop .right-arrow {
+  color: var(--accent-color);
+  font-size: var(--header-font-size);
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.left-arrow-backdrop .left-arrow:hover {
+  color: var(--support-color);
+  transform: translateX(-5px);
+}
+
+.right-arrow-backdrop .right-arrow:hover {
+  color: var(--support-color);
+  transform: translateX(5px);
+}
+
+.slider-component .card-slider {
+  display: flex;
+  align-items: center;
+  gap: 1%;
+  padding: 1rem 0;
+}
+
+.card-slider .movie-card {
+  width: calc(96% / 5);
+  height: 20rem;
+  overflow: hidden;
+  border-radius: 20px;
+  flex-shrink: 0;
+}
+
+.movie-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

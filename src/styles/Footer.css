@@ -1,0 +1,21 @@
+.footer {
+    width: 100%;
+    position: relative;
+    padding: 1rem;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+  }
+  
+  .footer i{
+      color: var(--brand-color);
+  }
+  
+  .footer span {
+    font-family: var(--font-family-content);
+    font-size: var(--sub-content-font-size);
+    color: var(--accent-color);
+  }
+  
