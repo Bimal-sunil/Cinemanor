@@ -1,13 +1,19 @@
-import React, { useRef, useState, useEffect } from "react";
-import { createLink } from "../utils/linkGenerate";
+import React, { useRef, useState } from "react";
+import { createAPIUrl, useFetch } from "../utils/functions";
 import "../styles/Slider.css";
+import Card from "./Card";
+import { ContentType } from "../utils/enum";
 
 type Props = {
-  moviesList: string[];
+  /**Category name */
+  category: string;
+
+  /**Type of content fetching */
+  contentType: `${ContentType}`;
 };
 
 function Slider(props: Props) {
-  const { moviesList } = props;
+  const { category, contentType } = props;
   const slideArea: number = 96 / 5 + 1;
   const [translate, setTranslate] = useState(slideArea);
   const [currentIndex, setCurrentIndex] = useState<number>(5);
@@ -30,6 +36,10 @@ function Slider(props: Props) {
       setTranslate((prevTranslate) => prevTranslate - slideArea);
     }
   };
+
+  const url = createAPIUrl(category, contentType);
+  const { data } = useFetch(url);
+
   return (
     <div className="slider-component">
       <div
@@ -43,15 +53,13 @@ function Slider(props: Props) {
           onClick={() => handlePrevCard()}></i>
       </div>
       <div className="card-slider" ref={sliderRef}>
-        {moviesList.map((posterPath, index) => (
-          <div className="movie-card">
-            <img src={createLink(posterPath)} key={index} alt="" />
-          </div>
+        {data.map((movie, index) => (
+          <Card content={movie} key={index} contentType={contentType} />
         ))}
       </div>
       <div
         className={
-          currentIndex < moviesList.length
+          currentIndex < data.length
             ? "right-arrow-backdrop active"
             : "right-arrow-backdrop "
         }>

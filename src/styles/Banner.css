@@ -1,0 +1,180 @@
+.banner {
+  width: 100%;
+  height: min(70vh, 50vw);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner .banner-arrow {
+  position: absolute;
+  font-size: 3rem;
+  top: 50%;
+  left: 2%;
+  color: var(--accent-color);
+  transform: translateY(-50%);
+  z-index: 5000;
+  cursor: pointer;
+  transition: 400ms;
+  &:hover {
+    color: var(--support-color);
+    left: 1%;
+  }
+}
+
+.banner-arrow:last-child {
+  left: auto;
+  right: 2%;
+  &:hover {
+    left: auto;
+    right: 1%;
+  }
+}
+
+.banner .banner-div {
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+  cursor: pointer;
+}
+
+.banner .banner-div.active {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+  z-index: 2000;
+}
+
+.banner-div .banner-img-loading-container {
+  width: 100%;
+  height: 100%;
+  background: url(/public/assets/banner-fallback.png);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-img-loading-container .banner-img {
+  opacity: 0;
+}
+
+.banner-img-container .banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  opacity: 1;
+  transition: 400ms;
+}
+
+.banner-div::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(15, 22, 29, 0) 0%, #0f161d 100%);
+  box-shadow: 0px 38px 58px 31px rgba(254, 0, 57, 0.05);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.banner-div .banner-description {
+  width: 65%;
+  height: 35%;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  color: var(--support-color);
+  text-align: left;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.banner-description .banner-key-details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.banner-description .banner-key {
+  padding: 0.25rem 0.5rem;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
+  backdrop-filter: blur(0.5rem);
+  width: fit-content;
+  max-width: 4rem;
+  color: var(--support-color);
+  font-family: var(--font-family-header);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.banner-key i {
+  color: var(--brand-color);
+}
+
+.banner-description .banner-title {
+  font-size: var(--header-font-size);
+  font-family: var(--font-family-header);
+}
+
+.banner-description .banner-details {
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: var(--sub-content-font-size);
+  color: var(--accent-color);
+  font-family: var(--font-family-content);
+}
+
+.banner-description .banner-genre {
+  color: var(--accent-color);
+  font-family: var(--font-family-content);
+}
+
+/* Nav highlights */
+
+.banner .nav-highlight-container {
+  width: 15%;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  z-index: 2001;
+}
+
+.nav-highlight-container .nav-highlight {
+  width: 20%;
+  height: 4px;
+  border-radius: 20px;
+  background-color: var(--accent-color);
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 300ms;
+}
+
+.nav-highlight-container .nav-highlight.active {
+  background-color: var(--support-color);
+  opacity: 1;
+}
+
+.nav-highlight-container .nav-highlight:hover {
+  opacity: 0.9;
+}
