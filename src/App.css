@@ -5,11 +5,16 @@
   height: 100vh;
 }
 
-.main-layout{
+.main-layout {
   min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.home-page {
+  width: 100%;
+  padding: 2rem 0;
 }
 
 .App-logo {
@@ -36,6 +41,20 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.skeleton-content {
+  animation: skeleton-loading 1s infinite alternate;
+  background-color: var(--accent-color);
+}
+
+@keyframes skeleton-loading {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes App-logo-spin {

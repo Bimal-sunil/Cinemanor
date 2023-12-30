@@ -1,0 +1,29 @@
+.card-skeleton {
+    width: 100%;
+    height: 20rem;
+    overflow: hidden;
+    border-radius: 20px;
+    flex-shrink: 0;
+    position: relative;
+    background-color: var(--support-color);
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    opacity: 0.75;
+}
+
+.card-skeleton .card-details-skeleton{
+    width: 100%;
+    height: 1rem;
+}
+
+.card-skeleton .card-details-skeleton:last-child{
+    width: 75%;
+}
+
+.card-image-skeleton{
+    width: 100%;
+    height: 80%;
+    border-radius: calc(20px - 0.75rem);
+}

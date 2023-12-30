@@ -1,0 +1,23 @@
+.category-card {
+  width: max(12rem, 18vw);
+  height: 15rem;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(0.5rem);
+}
+
+.category-card .category-icon {
+  font-size: calc(2 * var(--header-font-size));
+  color: var(--brand-color);
+}
+
+.category-card .category-card-name {
+  font-size: var(--sub-header-font-size);
+  font-family: var(--font-family-header);
+  color: var(--support-color);
+}

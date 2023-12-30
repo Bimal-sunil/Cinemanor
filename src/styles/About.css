@@ -1,0 +1,78 @@
+.about-page{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 0 0;
+}
+
+.about-logo{
+    width: 50%;
+    margin: 2rem 0;
+}
+
+.about{
+    width: 100%;
+}
+
+.about .about-content{
+    padding: 2rem 3rem;
+    text-align: left;
+    color: var(--support-color);
+    font-family: var(--font-family-content);
+    font-size: var(--sub-content-font-size);
+    line-height: 1.2rem;
+}
+
+.contact{
+    width: 100%;
+}
+
+.contact .contact-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    color: var(--support-color);
+}
+
+.contact-content .address{
+    display: flex;
+    text-align: left;
+    gap: 0.5rem;
+    font-family: var(--font-family-content);
+}
+
+.address span{
+    line-height: 1.5rem;
+}
+
+.contact-content .social{
+    display: flex;
+    gap: 1rem;
+}
+
+.social i{
+    font-size: var(--sub-header-font-size);
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.social i:hover{
+    transform: scale(1.1);
+}
+
+.contact-content .primary-contact{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+    font-family: var(--font-family-content);
+}
+
+.primary-contact > div{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}

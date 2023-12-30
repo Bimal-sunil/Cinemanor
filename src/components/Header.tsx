@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
+import React from "react";
 import Search from "./Search";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "../styles/Header.css";
 import Divider from "./Divider";
 
@@ -17,13 +17,21 @@ function Header() {
   );
   return (
     <div className="header">
-      <img src="assets/logo.png" alt="" className="header-logo" />
+      <Link to={"/"} style={{ textDecoration: "none" }}>
+        <img src="assets/logo.png" alt="" className="header-logo" />
+      </Link>
       <div className="nav-container">
         <Search />
         <ul className="nav-bar">
           <li className="nav-item">
             <CustomNavLink to="/">
               Home
+              <div className="active-nav-highlight"></div>
+            </CustomNavLink>
+          </li>
+          <li className="nav-item">
+            <CustomNavLink to="/tv">
+              Tv
               <div className="active-nav-highlight"></div>
             </CustomNavLink>
           </li>

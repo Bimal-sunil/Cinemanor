@@ -30,3 +30,9 @@
   cursor: pointer;
   font-size: 1.2rem;
 }
+
+.clear-icon{
+  color: var(--accent-color);
+  cursor: pointer;
+  font-size: 1.2rem;
+}
