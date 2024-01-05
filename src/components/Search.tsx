@@ -29,6 +29,11 @@ function Search() {
     dispatch(clearSearchTerm(undefined));
   };
 
+  const handleSearchKeyDown = (event: React.KeyboardEvent) => {
+    console.log(event.key);
+    if (event.key === "Enter") [navigate(`/search?search_term=${searchTerm}`)];
+  };
+
   return (
     <OutsideClickHandler onOutsideClick={() => setIsActive(false)}>
       <div className={isActive ? "search-bar-active" : "search-bar"}>
@@ -38,6 +43,7 @@ function Search() {
           placeholder="Search movies"
           value={searchTerm}
           onChange={(event) => handleSearchChange(event)}
+          onKeyDown={(event) => handleSearchKeyDown(event)}
         />
         {searchTerm !== "" && isActive && (
           <i
