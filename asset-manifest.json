@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Cinemanor/static/css/main.ba0745c2.css",
+    "main.js": "/Cinemanor/static/js/main.84911ad3.js",
+    "static/media/banner-fallback.png": "/Cinemanor/static/media/banner-fallback.95016a26f33c468bd1aa.png",
+    "static/media/image-fallback.png": "/Cinemanor/static/media/image-fallback.2d5c0fb54dfd74d11094.png",
+    "index.html": "/Cinemanor/index.html",
+    "main.ba0745c2.css.map": "/Cinemanor/static/css/main.ba0745c2.css.map",
+    "main.84911ad3.js.map": "/Cinemanor/static/js/main.84911ad3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ba0745c2.css",
+    "static/js/main.84911ad3.js"
+  ]
+}
