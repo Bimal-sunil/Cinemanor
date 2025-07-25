@@ -30,7 +30,6 @@ function Search() {
   };
 
   const handleSearchKeyDown = (event: React.KeyboardEvent) => {
-    console.log(event.key);
     if (event.key === "Enter") [navigate(`/search?search_term=${searchTerm}`)];
   };
 

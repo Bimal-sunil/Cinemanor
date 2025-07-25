@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Home from "./pages/Home";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Route, HashRouter as Router, Routes } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import Categories from "./pages/Categories";
 import About from "./pages/About";

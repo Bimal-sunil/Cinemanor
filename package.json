@@ -1,4 +1,5 @@
 {
+  "homepage": "https://bimal-sunil.github.io/Cinemanor",
   "name": "cinemanor-app",
   "version": "0.1.0",
   "private": true,
@@ -12,8 +13,8 @@
     "@types/react": "^18.2.13",
     "@types/react-dom": "^18.2.6",
     "axios": "^1.4.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-outside-click-handler": "^1.3.0",
     "react-redux": "^8.1.1",
     "react-router-dom": "^6.13.0",
@@ -28,7 +29,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -54,6 +57,7 @@
     "@typescript-eslint/eslint-plugin": "^6.13.2",
     "@typescript-eslint/parser": "^6.13.2",
     "eslint": "^8.55.0",
-    "eslint-plugin-react": "^7.33.2"
+    "eslint-plugin-react": "^7.33.2",
+    "gh-pages": "^6.3.0"
   }
 }
